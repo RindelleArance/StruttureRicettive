@@ -2,6 +2,7 @@ package com.example.strutturericettive;
 
 
 import android.content.Context;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,12 +25,14 @@ public class ExampleFragment extends Fragment
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)
     {
         view = inflater.inflate(R.layout.fragment_layout_generico1, container, false);
+        recuperaLayout();
         return view;
     }
 
     public void recuperaLayout()
     {
         imageView = view.findViewById(R.id.immagine);
+        imageView.setBackgroundColor(Color.BLACK);
         imageView.setVisibility(View.GONE);
     }
 

@@ -26,8 +26,7 @@ import android.view.Menu;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener
 {
-
-    FragmentManager fragManager;
+    ExampleFragment fragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -115,7 +114,7 @@ public class MainActivity extends AppCompatActivity
     {
         FragmentManager mFragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = mFragmentManager.beginTransaction();
-        ExampleFragment fragment = new ExampleFragment();
+        fragment = new ExampleFragment();
         fragmentTransaction.add(R.id.container_lista, fragment);
         fragmentTransaction.commit();
     }
